@@ -63,3 +63,9 @@
 .todos-clear {
     cursor: pointer;
 }
+
+@media screen and (min-width: 375px) {
+    .todo-wrapper {
+        height: 100vh;
+    }
+}
