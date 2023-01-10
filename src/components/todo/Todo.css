@@ -1,0 +1,42 @@
+.todos-wrapper {
+    margin-top: 30px;
+    max-width: 320px;
+    width: 100%;
+}
+
+.todos-box {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+.todo-inner {
+    display: flex;
+    align-items: center;
+}
+.todos-title:hover {
+    color: #2D70FD;
+}
+
+.incomplete-task {
+    width: 25px;
+    height: 25px;
+    border: 1px solid #EEEEEE;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.completed-task {
+    background-color: #00D8A7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+    color: #fff;
+}
+
+.todo-edit {
+    margin-right: 10px;
+}
