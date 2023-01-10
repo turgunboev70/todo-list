@@ -34,8 +34,8 @@ const Todo = ({ todos, removeTodos, setTodos, editHandle }) => {
                             </span>
                         </div>
                         <div className='todo-icon'>
-                            <FiEdit className='todo-edit' onClick={() => editHandle(id)}/>
-                            <FiTrash2 onClick={() => removeTodos(id)} />
+                            {!completed && <FiEdit className='todo-edit' onClick={() => editHandle(id)}/>}
+                            <FiTrash2 onClick={() => removeTodos(id)} style={completed ? {color : "red"} : null}/>
                         </div>
                     </div>
                 )}

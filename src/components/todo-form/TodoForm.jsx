@@ -5,12 +5,16 @@ import "./TodoForm.css"
 const TodoForm = () => {
     const [inputValue, setInputValue] = useState("")
     const [editId, setEditId] = useState(0)
-    const [todos, setTodos] = useState([])
+    const [todos, setTodos] = useState( JSON.parse(localStorage.getItem("todos")) || [])
     const inputEl = useRef(null)
 
     useEffect(() => {
         inputEl.current.focus()
     }, [])
+
+    useEffect(() => {
+        localStorage.setItem("todos", JSON.stringify(todos))
+    }, [todos])
 
     const addTodos = e => {
         e.preventDefault()
